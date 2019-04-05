@@ -59,10 +59,11 @@ https://github.com/nicodalessandro11/DAM19/blob/master/Data1.xlsx
 > View(Data1)
 > boxplot(error~month, data = Data1, at = c(1, 2), names = c("August", "September"), horizontal = TRUE, notch = TRUE)
 ````
-![boxplot](https://github.com/nicodalessandro11/DAM19/blob/master/Rplot.png)
+![boxplot](https://raw.githubusercontent.com/nicodalessandro11/DAM19/master/Rplot.png)
 
 Also a Bargraph comparison shows a clear improvement between August and September.
 
+![BarGraph](https://raw.githubusercontent.com/enavarro/DAM19-1/master/Error%20rate%20Aug%20vs%20Sep.png)
 
 
 ## Statistical Analysis
@@ -107,21 +108,19 @@ In order to decide if we pay the bonus an estimate of potential additional reven
 
 |     Description         | Value     |
 |:----------------------: |:---------:|
-| Reduction Errors:    |  -0.70%   |
-| % Correct Queries       |   99.43%  | 
-|  Correct Queries        | 852,401.02 |
-| +Correct Queries        | 4,888 |
+| Reduction Errors:    |  -0.48%   |
+| % Correct Queries       |   99.21%%  | 
+| NewCorrect Queries        | 850,515|
+| Additional Correct Queries (New OK - Past Avg OK ) | ***4,115*** |
 
-Ca
+Calculating a potential additional revenue for the 5000 locations a month, taking as baseline that every month we have  -0.48% error rate that in the month of August.
 
 |     Description         |   Value.   |  Revenue
 |:----------------------: |:----------:|:----------:|
 | Revenue x destination | €1.00 |
 | Average Conversion Rate | 1.84% |
 | +Reservations/month x destination| 76 | €75.72
-| Number of Destination | 5000 | €449,694
-| 1 year                |  12 months| **€4,542,946**
-
+| Number of Destination | 5000 | **€449,694**
 
 
 
