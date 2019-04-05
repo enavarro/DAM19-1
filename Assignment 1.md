@@ -25,7 +25,7 @@ ___
 ````
 $ aws configure
 AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
-AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+AWS Secret Access Key [None]:  <Enter_Your_Password>
 Default region name [None]: eu-west-1
 Default output format [None]: ENTER
 ````
@@ -59,8 +59,10 @@ https://github.com/nicodalessandro11/DAM19/blob/master/Data1.xlsx
 > View(Data1)
 > boxplot(error~month, data = Data1, at = c(1, 2), names = c("August", "September"), horizontal = TRUE, notch = TRUE)
 ````
-
 ![boxplot](https://github.com/nicodalessandro11/DAM19/blob/master/Rplot.png)
+
+Also a Bargraph comparison shows a clear improvement between August and September.
+
 
 
 ## Statistical Analysis
@@ -90,12 +92,46 @@ alternative hypothesis: true location shift is not equal to 0
 
 ___
 
+## Potential Revenue Gain
+As per the two graph comparisons and statdistacal analyst we can see the engineers made progress between Agust and September.  
+
+Howerver, is this progress good enought to pay the bonus?  
+
+We woudl like to calculate if the improvement generate enoguh revenue to pay out the bonus or if they have to work another month.
+
+In order to decide if we pay the bonus an estimate of potential additional revenue is required.  
+
+### Assumptions
+* Eccommerce conversion rate average 1.84% [source](https://www.wordstream.com/blog/ws/2014/03/17/what-is-a-good-conversion-rate)
+* Assuming for every reservation the company makes €1.00. I made up this value, in the real world we will have an average reservation value per destination.
+
+|     Description         | Value     |
+|:----------------------: |:---------:|
+| Reduction Errors:    |  -0.70%   |
+| % Correct Queries       |   99.43%  | 
+|  Correct Queries        | 852,401.02 |
+| +Correct Queries        | 4,888 |
+
+Ca
+
+|     Description         |   Value.   |  Revenue
+|:----------------------: |:----------:|:----------:|
+| Revenue x destination | €1.00 |
+| Average Conversion Rate | 1.84% |
+| +Reservations/month x destination| 76 | €75.72
+| Number of Destination | 5000 | €449,694
+| 1 year                |  12 months| **€4,542,946**
+
+
+
+
 ## Conclusion
 
-With the information provided after running the Mann-Withney/Wilcoxon test, we can confirm that the distribution of both samples is not the same. In September, there is statistically a significant decrease in the number of errors compared to August. We decided to reject the nulle hypothesis in favor of the alternative hypothesis, so we consider the bonus payment should be made.			
-						
-						
-						
+With the information provided after running the Mann-Withney/Wilcoxon test, we can confirm that the distribution of both samples is not the same. In September, there is statistically a significant decrease in the number of errors compared to August. 
+
+We decided to reject the nulle hypothesis in favor of the alternative hypothesis, so we consider the bonus payment should be made.
+
+On top of that, the potential revenue gain shows an additional revenue of €378,579 per month if we continue having a 0.48% error rate.
 						
 
 
